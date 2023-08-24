@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { SharedDataService } from '../shared-data.service';
+import { Component, ViewChild } from '@angular/core';
+import { ResponseApplicationComponent } from '../response-application/response-application.component';
 
 @Component({
   selector: 'app-send-application',
@@ -8,21 +8,22 @@ import { SharedDataService } from '../shared-data.service';
 })
 export class SendApplicationComponent {
 
+  @ViewChild(ResponseApplicationComponent) responseComponent!: ResponseApplicationComponent;
+
   value2 = "";
 
   items : string[] = [];
 
-  constructor(private sharedDataService: SharedDataService) {}
+  responseReply! : string;
+
+  constructor() {}
+
+  getResponse(responseText:string){
+    this.responseReply = responseText;
+  }
 
   addNewItem(item:string){
-    this.items.push(item);
-  }
-
-  clearValue() {
+    this.responseComponent.addItem(item);
     this.value2 = "";
-  }
-
-  updateResponseValue() {
-    this.sharedDataService.sendDataToResponse.emit(this.value2);
   }
 }

@@ -3,18 +3,19 @@
     <form class="example-form">
       <mat-form-field class="example-full-width">
         <mat-label>Send Application</mat-label>
-        <input matInput placeholder="Enter text" id="item-input" #newItem>
+        <input matInput placeholder="Enter text" id="item-input" [(ngModel)]="value2" name="value">
       </mat-form-field>
   </form>
   <section>
-      <button class="btn" mat-button (click)="addNewItem(newItem.value)">Send</button>
+      <button class="btn" mat-button (click)="addNewItem(value2)">Send</button>
   </section>
-  <ul>
+    <ul>
       <li *ngFor="let item of items">{{item}}</li>
     </ul>
+    <p>{{responseReply}}</p>
   </div>
   <div class="col">
-    <app-response-application></app-response-application>
+    <app-response-application [comingText]="value2" (outputReply) = "getResponse($event)"></app-response-application>
   </div>
 </div>
 
