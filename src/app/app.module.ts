@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -34,18 +33,15 @@ import {MatButtonModule} from '@angular/material/button';
     RouterModule.forRoot([
       {
         path: 'product-list', 
-        component: ProductListComponent,
-        data: {animation: 'statusPage'}
+        component: ProductListComponent
       },
       {
         path: 'add-product', 
-        component: AddProductComponent,
-        data: {animation: 'statusPage'}
+        component: AddProductComponent
       },
       {
         path: 'send-application', 
-        component: SendApplicationComponent,
-        data: {animation: 'statusPage'}
+        component: SendApplicationComponent
       }
     ]),
     BrowserAnimationsModule,

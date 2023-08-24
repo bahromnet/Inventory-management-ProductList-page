@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { SharedDataService } from '../shared-data.service';
+import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { SendApplicationComponent } from '../send-application/send-application.component';
 
 @Component({
   selector: 'app-response-application',
@@ -12,17 +12,21 @@ export class ResponseApplicationComponent {
 
   value1 = "";
 
-  constructor(private sharedDataService: SharedDataService) {}
+  // @ViewChild(SendApplicationComponent) sendApplication!: SendApplicationComponent;
+
+  @Input() comingText!:string;
+  @Output() outputReply = new EventEmitter<string>()
+
+  constructor() {}
 
   addItem(item : string){
+    //  this.sendApplication.addNewItem(item);
     this.items.push(item);
-  }
-
-  clearValue() {
     this.value1 = "";
   }
 
-  updateSendValue() {
-    this.sharedDataService.sendDataToSend.emit(this.value1);
+  eventInvokeMethod(event:Event){
+    this.outputReply.emit(this.value1);
   }
+
 }
