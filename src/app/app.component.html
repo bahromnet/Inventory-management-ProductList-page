@@ -1,1 +1,7 @@
-<app-product-list></app-product-list>
+<app-header></app-header>
+
+<app-navbar></app-navbar>
+
+<div [@routeAnimations]="getRouteAnimationData()" class="page-wrapper">
+    <router-outlet></router-outlet>
+</div>

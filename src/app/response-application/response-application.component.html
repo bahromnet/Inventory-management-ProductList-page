@@ -1,0 +1,14 @@
+<div>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Send Application</mat-label>
+          <input matInput [(ngModel)]="value1" placeholder="Enter text" id="item-input">
+        </mat-form-field>
+    </form>
+    <section>
+        <button class="btn" mat-button color="primary" (click)="addItem(value1)">Send</button>
+    </section>
+    <ul>
+        <li *ngFor="let item of items">{{item}}</li>
+    </ul>
+</div>
