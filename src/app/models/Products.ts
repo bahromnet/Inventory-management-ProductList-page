@@ -9,5 +9,4 @@ export class Products{
     public Quantity? : number;
     public CreatedBy? : string;
     public Picture? : string;
-
 }
