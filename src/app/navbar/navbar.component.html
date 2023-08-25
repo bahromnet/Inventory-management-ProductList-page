@@ -10,9 +10,10 @@
                     <a href="javascript:void(0);"><img src="assets/img/icons/product.svg" alt="img"><span>
                             Product</span> <span class="menu-arrow"></span></a>
                     <ul>
-                        <li><a routerLinkActive="customActived" routerLink="/send-application">Application</a></li>
-                        <li><a routerLinkActive="customActived" routerLink="/product-list">Product List</a></li>
-                        <li><a routerLinkActive="customActived" routerLink="/add-product">Add Product</a></li>
+                        <li><a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/management">Test</a></li>
+                        <li><a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/send-application">Application</a></li>
+                        <li><a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/product-list">Product List</a></li>
+                        <li><a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/add-product">Add Product</a></li>
                         <li><a href="categorylist.html">Category List</a></li>
                         <li><a href="addcategory.html">Add Category</a></li>
                         <li><a href="subcategorylist.html">Sub Category List</a></li>

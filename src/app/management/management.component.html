@@ -1,0 +1,9 @@
+<h2>Dilshodbek Teacher</h2>
+<button (click)="announce()" ngClass="btn btn-success">Topshiriq berish</button>
+
+<app-employee *ngFor="let emp of employees" [employee]="emp"></app-employee>
+
+<h3>History</h3>
+<ul>
+    <li *ngFor="let em of history">{{em}}</li>
+</ul>
