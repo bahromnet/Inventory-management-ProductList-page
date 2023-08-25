@@ -16,6 +16,9 @@ import {FormsModule} from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
+import { ManagementComponent } from './management/management.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -25,25 +28,13 @@ import {MatButtonModule} from '@angular/material/button';
     HeaderComponent,
     AddProductComponent,
     SendApplicationComponent,
-    ResponseApplicationComponent
+    ResponseApplicationComponent,
+    ManagementComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
-    // AppRoutingModule,
-    RouterModule.forRoot([
-      {
-        path: 'product-list', 
-        component: ProductListComponent
-      },
-      {
-        path: 'add-product', 
-        component: AddProductComponent
-      },
-      {
-        path: 'send-application', 
-        component: SendApplicationComponent
-      }
-    ]),
+    AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatFormFieldModule,
