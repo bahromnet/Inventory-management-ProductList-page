@@ -19,6 +19,10 @@ import {MatButtonModule} from '@angular/material/button';
 import { ManagementComponent } from './management/management.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ClientComponent } from './client/client.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductTypeComponent } from './product-type/product-type.component';
+import { CreateProductTypeComponent } from './create-product-type/create-product-type.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,10 @@ import { AppRoutingModule } from './app-routing.module';
     SendApplicationComponent,
     ResponseApplicationComponent,
     ManagementComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    ClientComponent,
+    ProductTypeComponent,
+    CreateProductTypeComponent
   ],
   imports: [
     BrowserModule,
@@ -41,8 +48,8 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     MatIconModule,
     MatDividerModule,
-    MatButtonModule
-
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

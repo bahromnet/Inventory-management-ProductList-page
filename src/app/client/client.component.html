@@ -1,0 +1,27 @@
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Permission</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of client">
+      <tr>
+        <th>{{item.id}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.permissionNames}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Send Application</mat-label>
+      <input matInput placeholder="Enter Id" id="item-input" name="value">
+    </mat-form-field>
+</form>
+<section>
+    <!-- <button class="btn" mat-button (click)="getById()">Send</button> -->
+</section>
