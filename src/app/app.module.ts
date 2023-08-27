@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
-import { RouterModule } from '@angular/router';
 import { AddProductComponent } from './add-product/add-product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SendApplicationComponent } from './send-application/send-application.component';
@@ -21,8 +20,14 @@ import { EmployeeComponent } from './employee/employee.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ClientComponent } from './client/client.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ProductTypeComponent } from './product-type/product-type.component';
-import { CreateProductTypeComponent } from './create-product-type/create-product-type.component';
+import { ProductTypeComponent } from './ProductType/product-type/product-type.component';
+import { CreateProductTypeComponent } from './ProductType/create-product-type/create-product-type.component';
+import {MatTableModule} from '@angular/material/table';
+import { ProductTypeByidComponent } from './ProductType/product-type-byid/product-type-byid.component';
+import { MatCardModule } from "@angular/material/card";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { FlexLayoutModule } from "@angular/flex-layout";
+
 
 @NgModule({
   declarations: [
@@ -37,7 +42,8 @@ import { CreateProductTypeComponent } from './create-product-type/create-product
     EmployeeComponent,
     ClientComponent,
     ProductTypeComponent,
-    CreateProductTypeComponent
+    CreateProductTypeComponent,
+    ProductTypeByidComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +55,11 @@ import { CreateProductTypeComponent } from './create-product-type/create-product
     MatIconModule,
     MatDividerModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
+    MatCardModule,
+    MatToolbarModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
