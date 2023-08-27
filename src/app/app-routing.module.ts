@@ -5,7 +5,9 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { SendApplicationComponent } from './send-application/send-application.component';
 import { ManagementComponent } from './management/management.component';
 import { ClientComponent } from './client/client.component';
-import { ProductTypeComponent } from './product-type/product-type.component';
+import { ProductTypeComponent } from './ProductType/product-type/product-type.component';
+import { CreateProductTypeComponent } from './ProductType/create-product-type/create-product-type.component';
+import { ProductTypeByidComponent } from './ProductType/product-type-byid/product-type-byid.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,14 @@ const routes: Routes = [
   {
     path: 'product-type', 
     component: ProductTypeComponent
+  },
+  {
+    path: 'create-product', 
+    component: CreateProductTypeComponent
+  },
+  {
+    path: 'product-type-byid', 
+    component: ProductTypeByidComponent
   }
 ];
 
