@@ -27,6 +27,8 @@ import { ProductTypeByidComponent } from './ProductType/product-type-byid/produc
 import { MatCardModule } from "@angular/material/card";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { GetAllPermissionComponent } from './Rolesss/get-all-permission/get-all-permission.component';
+import { CreatePermissionComponent } from './Rolesss/create-permission/create-permission.component';
 
 
 @NgModule({
@@ -44,6 +46,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     ProductTypeComponent,
     CreateProductTypeComponent,
     ProductTypeByidComponent,
+    GetAllPermissionComponent,
+    CreatePermissionComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,8 @@ import { ClientComponent } from './client/client.component';
 import { ProductTypeComponent } from './ProductType/product-type/product-type.component';
 import { CreateProductTypeComponent } from './ProductType/create-product-type/create-product-type.component';
 import { ProductTypeByidComponent } from './ProductType/product-type-byid/product-type-byid.component';
+import { GetAllPermissionComponent } from './Rolesss/get-all-permission/get-all-permission.component';
+import { CreatePermissionComponent } from './Rolesss/create-permission/create-permission.component';
 
 const routes: Routes = [
   {
@@ -39,8 +41,16 @@ const routes: Routes = [
     component: CreateProductTypeComponent
   },
   {
-    path: 'product-type-byid', 
+    path: 'product-type-byid/:id', 
     component: ProductTypeByidComponent
+  },
+  {
+    path: 'get-all-permission', 
+    component: GetAllPermissionComponent
+  },
+  {
+    path: 'create-permission', 
+    component: CreatePermissionComponent
   }
 ];
 

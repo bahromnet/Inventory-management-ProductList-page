@@ -1,9 +1,9 @@
 export interface ProductType{
-    id:string;
+    id?:string;
     name:string;
     picture:string;
-    createdDate: Date;
-    createdBy:string;
-    modifiedDate:Date;
-    modifiedBy:string;
+    createdDate?: Date;
+    createdBy?:string;
+    modifiedDate?:Date;
+    modifiedBy?:string;
 }

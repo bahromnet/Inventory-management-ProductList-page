@@ -1,25 +1,25 @@
-<button mat-raised-button color="primary" class="btpt" routerLink="/create-product">+Add New ProductType</button>
+<button mat-raised-button color="primary" class="btpt" routerLink="/create-permission">+Add New Permission</button>
 
-<table mat-table [dataSource]="productTypes.items" class="mat-elevation-z8 demo-table">
-    <ng-container matColumnDef="id">
+<table mat-table [dataSource]="roles.items" class="mat-elevation-z8 demo-table">
+    <ng-container matColumnDef="permissionId">
       <th mat-header-cell *matHeaderCellDef>ID</th>
-      <td mat-cell *matCellDef="let element">{{element.id}}</td>
+      <td mat-cell *matCellDef="let element">{{element.permissionId}}</td>
     </ng-container>
   
-    <ng-container matColumnDef="name">
+    <ng-container matColumnDef="permissionName">
       <th mat-header-cell *matHeaderCellDef>Name</th>
-      <td mat-cell *matCellDef="let element">{{element.name}}</td>
+      <td mat-cell *matCellDef="let element">{{element.permissionName}}</td>
     </ng-container>
   
-    <ng-container matColumnDef="picture">
+    <!-- <ng-container matColumnDef="picture">
       <th mat-header-cell *matHeaderCellDef>Picture</th>
       <td mat-cell *matCellDef="let element">{{element.picture}}</td>
-    </ng-container>
+    </ng-container> -->
 
     <ng-container matColumnDef="actions" style="width: 300px;">
         <th mat-header-cell *matHeaderCellDef>Actions</th>
         <td mat-cell *matCellDef="let element">
-          <button mat-icon-button color="primary" [routerLink]="['/product-type-byid', element.id]">
+          <button mat-icon-button color="primary">
             <mat-icon>visibility</mat-icon>
           </button>
           <button mat-icon-button color="accent">
@@ -31,6 +31,6 @@
         </td>
       </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="['id', 'name', 'picture', 'actions']"></tr>
-    <tr mat-row *matRowDef="let row; columns: ['id', 'name', 'picture', 'actions']"></tr>
+    <tr mat-header-row *matHeaderRowDef="['permissionId', 'permissionName', 'actions']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['permissionId', 'permissionName', 'actions']"></tr>
   </table>

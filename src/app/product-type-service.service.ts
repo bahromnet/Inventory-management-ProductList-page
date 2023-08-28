@@ -18,7 +18,7 @@ export class ProductTypeServiceService {
     return this.client.get<ProductType>(`http://localhost:5234/api/ProductType/GetProductTypeById/?id=${id}`);
   }
 
-  createProductType(producType:IProductType){
+  createProductType(producType:ProductType){
     return this.client.post<any>(`http://localhost:5234/api/ProductType/CreateProductType`, producType);
   }
 }
