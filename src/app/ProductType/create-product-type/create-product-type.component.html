@@ -1,11 +1,15 @@
 <div>
     <form class="example-form">
         <mat-form-field class="example-full-width">
-          <mat-label>Send Application</mat-label>
-          <input matInput name="responseInput" placeholder="Enter text">
+          <mat-label>Name</mat-label>
+          <input matInput name="responseInput" placeholder="Enter text" [(ngModel)]="newProductType.name">
         </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Picture</mat-label>
+            <input matInput name="responseInput" placeholder="Enter picture" [(ngModel)]="newProductType.picture">
+          </mat-form-field>
     </form>
     <section>
-        <button class="btn" mat-button>Send</button>
+        <button class="btn" mat-button (click)="sendNewProductType()">Send</button>
     </section>
 </div>

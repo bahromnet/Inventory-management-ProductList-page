@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ProductType } from 'src/app/models/ProductType';
 import { ProductTypeServiceService } from 'src/app/product-type-service.service';
 
@@ -9,16 +10,16 @@ import { ProductTypeServiceService } from 'src/app/product-type-service.service'
 })
 export class ProductTypeByidComponent implements OnInit {
 
-  id:string = 'f24cdd31-312c-47c7-9aa1-a262a8730f92';
+  id!:string;
   productType!:ProductType;
-
-  constructor(private service : ProductTypeServiceService){ }
+  constructor(private service : ProductTypeServiceService, private route: ActivatedRoute){ }
 
   ngOnInit(): void {
-    this.service.getByIdProductType(this.id).subscribe((pt) =>{
-      this.productType = pt;
-      console.log(this.productType.name);
-      
+    this.route.params.subscribe(params => {
+      this.id = params['id'];
+      this.service.getByIdProductType(this.id).subscribe((pt) => {
+        this.productType = pt;
+      });
     });
   }
 }
