@@ -9,7 +9,15 @@ import { IRoles } from 'src/app/models/IRoles';
 })
 export class GetAllPermissionComponent {
 
-  roles!:IRoles;
+  roles: IRoles = {
+    pageNumber: 0,
+    totalPages: 0,
+    totalCount: 0,
+    items: [],
+    hasPreviousPage: false,
+    hasNextPage: false
+  };
+
   constructor(private http:HttpClient){
     this.http.get<IRoles>("http://localhost:5234/api/Permission/GetAllPermissions").subscribe((pt) =>{
       this.roles = pt;

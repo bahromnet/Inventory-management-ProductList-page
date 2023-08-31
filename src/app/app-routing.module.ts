@@ -10,6 +10,8 @@ import { CreateProductTypeComponent } from './ProductType/create-product-type/cr
 import { ProductTypeByidComponent } from './ProductType/product-type-byid/product-type-byid.component';
 import { GetAllPermissionComponent } from './Rolesss/get-all-permission/get-all-permission.component';
 import { CreatePermissionComponent } from './Rolesss/create-permission/create-permission.component';
+import { DeletePermissionComponent } from './Rolesss/delete-permission/delete-permission.component';
+import { GetByidPemissionComponent } from './Rolesss/get-byid-pemission/get-byid-pemission.component';
 
 const routes: Routes = [
   {
@@ -51,6 +53,14 @@ const routes: Routes = [
   {
     path: 'create-permission', 
     component: CreatePermissionComponent
+  },
+  {
+    path: 'delete-permission/:id', 
+    component: DeletePermissionComponent
+  },
+  {
+    path: 'get-byid-permission/:id', 
+    component: GetByidPemissionComponent
   }
 ];
 

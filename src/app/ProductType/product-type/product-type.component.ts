@@ -9,7 +9,14 @@ import { ProductTypeServiceService } from '../../product-type-service.service';
 })
 export class ProductTypeComponent {
   
-  productTypes!:IProductType;
+  productTypes:IProductType = {
+    pageNumber: 0,
+    totalPages: 0,
+    totalCount: 0,
+    items: [],
+    hasPreviousPage: false,
+    hasNextPage: false
+  };
 
   constructor(private service : ProductTypeServiceService){
     this.service.getAllProductType().subscribe((pt)=>{

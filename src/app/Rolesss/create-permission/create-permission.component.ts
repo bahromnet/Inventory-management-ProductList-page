@@ -19,5 +19,6 @@ export class CreatePermissionComponent {
     this.http.post(`http://localhost:5234/api/Permission/CreatePermission`, this.newRole).subscribe((pt) => {
       console.log(pt);
     });
+    this.newRole = { name: [] };
   }
 }

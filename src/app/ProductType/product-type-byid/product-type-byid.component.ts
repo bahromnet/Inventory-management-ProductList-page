@@ -10,8 +10,8 @@ import { ProductTypeServiceService } from 'src/app/product-type-service.service'
 })
 export class ProductTypeByidComponent implements OnInit {
 
-  id!:string;
-  productType!:ProductType;
+  id:string = "";
+  productType!:ProductType
   constructor(private service : ProductTypeServiceService, private route: ActivatedRoute){ }
 
   ngOnInit(): void {
