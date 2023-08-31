@@ -29,7 +29,9 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { GetAllPermissionComponent } from './Rolesss/get-all-permission/get-all-permission.component';
 import { CreatePermissionComponent } from './Rolesss/create-permission/create-permission.component';
-
+import { DeletePermissionComponent } from './Rolesss/delete-permission/delete-permission.component';
+import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
+import { GetByidPemissionComponent } from './Rolesss/get-byid-pemission/get-byid-pemission.component';   
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { CreatePermissionComponent } from './Rolesss/create-permission/create-pe
     ProductTypeByidComponent,
     GetAllPermissionComponent,
     CreatePermissionComponent,
+    DeletePermissionComponent,
+    GetByidPemissionComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,7 +67,8 @@ import { CreatePermissionComponent } from './Rolesss/create-permission/create-pe
     MatTableModule,
     MatCardModule,
     MatToolbarModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
